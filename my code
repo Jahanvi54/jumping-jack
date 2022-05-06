@@ -1,0 +1,39 @@
+/*!const PLAY = -1;
+const END = 1;
+const START = 0;
+var gameState = START;
+
+var jack,jack2;
+var platform;
+var jack_image, platform_image;
+var platform1,platform2,platform3,platform4,platform5,platform6,platform7,platform8;
+var score=0;
+
+
+function preload(){
+  jack_image=loadImage("images/jack2.png");
+platform1 = loadImage("images/platform1.png");
+platform2 = loadImage("images/platform2.png");
+platform3 = loadImage("images/platform3.png");
+platform4 = loadImage("images/platform4.png");
+platform5 = loadImage("images/platform5.png");
+platform6 = loadImage("images/platform6.png");
+platform7 = loadImage("images/p2.png");
+platform8 = loadImage("images/p1.png");
+bg = loadImage('images/bg.png');
+gameOverImg = loadImage("images/gameOver.png");
+restartImg = loadImage("images/restart.png");
+}
+
+function setup(){
+  createCanvas(500,500);
+  jack = createSprite(200,200,50,50);
+  jack.addImage(jack_image);
+
+  platform = createSprite(200,250,20,30);
+platform.addImage("pla1form1");
+}
+
+function draw(){
+  drawSprites();
+}
